@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import MapQuestComponent from "./mapquest/mapquestComponent";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <MapQuestComponent
+          height={500}
+          width={1000}
+          center={[33.557774, -111.88919]}
+          baseLayer={"map"}
+          zoom={12}
+          apiKey={"YOUR_MAPQUEST_API_KEY"}
+        />
       </div>
     );
   }
